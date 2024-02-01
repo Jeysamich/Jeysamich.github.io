@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Login</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
@@ -13,26 +12,58 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="bg-zinc-900 bg-index">
-    <nav class="w-full h-20 bg-white/95 backdrop-blur-md flex px-10 justify-between items-center">
-      <div class="font-extrabold text-6xl">DWP</div>
-      <div>
-        <a
-          href="/index.html"
-          class="hover:bg-lime-400 btn rounded-full"
-          >Home</a
+
+  <body class="bg-zinc-900">
+    <div
+      class="flex items-center justify-center flex-col absolute inset-0 gap-2"
+    >
+      <form
+        id="loginForm"
+        class="gap-4 bg-white/90 flex min-w-[28rem] flex-col  backdrop-blur-md p-3 rounded-xl shadow-xl p-5"
+      >
+        <h1
+          class="text-5xl tracking-wider font-bold text-lime-400"
+          style="-webkit-text-stroke: 1px #212529"
         >
-        <a
-          href="/rick&morty.html"
-          class="hover:bg-lime-400 btn rounded-full"
-          >Rick & Morty</a
+          Login
+        </h1>
+        <div class="form-group">
+          <label for="email" class="tracking-wider text-xl font-bold"
+            >Email</label
+          >
+          <input
+            class="form-control shadow-none border-1"
+            id="email"
+            placeholder="Enter your email"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password" class="tracking-wider text-xl font-bold"
+            >Password</label
+          >
+          <input
+            type="password"
+            class="form-control shadow-none border-1"
+            minlength="8"
+            id="password"
+            placeholder="8 min. (upp, low, num, spec)"
+          />
+        </div>
+        <button
+          type="submit"
+          class="hover:bg-lime-400 border-1 mt-2 w-1/2 self-center translate-x-4 btn rounded-full"
         >
-        <a
-          href="/login.html"
-          class="hover:bg-lime-400 btn rounded-full"
-          >Login</a
-        >
-      </div>
-    </nav>
+          Join
+        </button>
+      </form>
+    </div>
+    <canvas></canvas>
+    <script src="./script.js"></script>
+    <script src="./login.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
