@@ -1,25 +1,31 @@
-document.addEventListener("DOMContentLoaded", () => {
-    var form = document.getElementById("validationForm");
-    form.addEventListener("submit", event => {
-        var email = document.getElementById("email1");
-        var password = document.getElementById("password1");
-        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        var isValidEmail = filter.test(email.value)
-        var isValidPassword = password.value.length >= 8
-        if (!isValidEmail) {
-            console.log("email not valid");
-            email.classList.add("is-invalid");
-        } else {
-            email.classList.remove("is-invalid");
-        }
-        if (!isValidPassword) {
-            console.log("Password not valid");
-            password.classList.add("is-invalid");
-        } else {
-            password.classList.remove("is-invalid");
-        }
-        if (!(isValidEmail && isValidPassword)) {
-            event.preventDefault()
-        }
-    })
-});
+document
+  .getElementById("loginForm")
+  .addEventListener("submit", function (event) {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    var passwordRegex =
+      /^(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/\-])(?=.*[A-Z])(?=.*\d.*\d).{8,}$/;
+
+    var isValidEmail = emailRegex.test(email);
+    var isValidPassword = passwordRegex.test(password);
+
+    if (isValidEmail && isValidPassword) {
+      alert("Login exitoso");
+    } else {
+      event.preventDefault();
+      var errorMessage = "";
+      console.log("Email: " + email, "Password: " + password);
+      if (!isValidEmail) {
+        errorMessage += "El formato del correo electrónico no es válido. ";
+      }
+
+      if (!isValidPassword) {
+        errorMessage += "La contraseña no cumple con los requisitos mínimos.";
+      }
+
+      alert("Credenciales incorrectas. Inténtelo de nuevo.\n" + errorMessage);
+    }
+  });
