@@ -18,9 +18,6 @@ body {
   font-weight: 900;
 }
 
-.button:hover {
-  box-shadow: #bfde42f0 0 0 10px, #bfde42f0 0 0 40px, #bfde42f0 0 0 80px;
-}
 
 
 @keyframes rotateIn {
