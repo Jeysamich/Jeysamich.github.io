@@ -84,9 +84,7 @@ body {
   transition: 0.5s;
   backdrop-filter: blur(15px);
 }
-.container .btn:hover a {
-  letter-spacing: 3px;
-}
+
 .container .btn a::before {
   content: "";
   position: absolute;
