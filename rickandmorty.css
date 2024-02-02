@@ -9,6 +9,7 @@ body {
   background-attachment: fixed;
 }
 
+
 .logo {
   animation: rotateIn 0.5s ease-out;
 }
