@@ -3,7 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom, #5d326c, #350048);
+  background: #white;
   font-family: "Lucida Console", sans-serif;
   overflow-x: hidden;
   background-attachment: fixed;
