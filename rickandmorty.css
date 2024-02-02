@@ -3,7 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #white;
+  background: none;
   font-family: "Lucida Console", sans-serif;
   overflow-x: hidden;
   background-attachment: fixed;
