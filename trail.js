@@ -4,10 +4,7 @@ const ctx = canvas.getContext("2d");
 
 let mouseMoved = false;
 
-const pointer = {
-  x: 0.5 * window.innerWidth,
-  y: 0.5 * window.innerHeight,
-};
+
 const params = {
   pointsNumber: 40,
   widthFactor: 0.3,
